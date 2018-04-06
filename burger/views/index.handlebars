@@ -1,20 +1,24 @@
 <h1>The Vegan Cafe</h1>
 <h2>Waiting to be devoured!</h2>
-{{#each burgerData}}
+{{#each burgers}}
   <div>
     {{#if this.devoured}}
-      <span>             <span>This burger was eaten: {{burger_name}}
+      <div style="border-bottom: solid;width:23%; padding:.2em;margin:.5em;float:left;height:120px;">
+        <p>This burger was eaten: {{burger_name}}</p>
+      </div>
     {{else}}
-      {{burger_name}} 
-      <form action="/update/{{ id }}" method="post">
-      <button type="submit">Devour it!</button>
-    </form> 
+      <div style="border-bottom: solid;width:23%;padding:.2em; margin:.5em;float:left;height:120px;">
+          {{burger_name}} 
+          <form action="/update/{{ id }}" method="post">
+            <button type="submit">Eat it!</button>
+          </form> 
+      </div>
     {{/if}}  
   </div>
 {{/each}}
 
 
-
+<div class="clearfix"></div>
 <form action="/create" method="post">
   <textarea name="item" rows="2" cols="30"></textarea>
   <button type="submit">Enter Your Burger</button>

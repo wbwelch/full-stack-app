@@ -4,8 +4,14 @@
     <meta charset="utf-8">
     <title>Burger App</title>
     <style>
+        *, *:before, *:after {
+          box-sizing: border-box;
+        }
         body {
             text-align: center;
+            background-color: #5a3b18;
+            font-family: georgia;
+            color: #b4f55c;
         }
         span,
         form,
@@ -13,6 +19,19 @@
             padding: .2em;
             margin: .8em;
         }
+        .clearfix:after {
+          visibility: hidden;
+          display: block;
+          font-size: 0;
+          content: " ";
+          clear: both;
+          height: 0;
+        }
+        .clearfix { display: inline-block; }
+
+        * html .clearfix { height: 1%; }
+        .clearfix { display: block; }
+
     </style>
 </head>
 <body>

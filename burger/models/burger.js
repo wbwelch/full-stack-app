@@ -1,6 +1,6 @@
 var orm = require("../config/orm.js");
 
-var burgerQueries = {
+var burgersQ = {
   show: function (cb) {
     orm.showBurgers('tableName', function (res) {
       cb(res);
@@ -18,4 +18,4 @@ var burgerQueries = {
   }
 };
 
-module.exports = burgerQueries;
+module.exports = burgersQ;

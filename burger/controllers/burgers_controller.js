@@ -5,7 +5,7 @@ var queries = require('../models/burger.js');
 router.get('/', function (req, res) {
     queries.show(function(data){
         var data1 = {
-            burgerData: data
+            burgers: data
         }
         res.render('index', data1);
     });
